@@ -860,10 +860,6 @@ extension BrowserViewController: TabManagerDelegate {
 
         let passwords = PasswordHelper(browser: tab, profile: profile)
         tab.addHelper(passwords, name: PasswordHelper.name())
-        
-        let longPressBrowserHelper = LongPressBrowserHelper(browser: tab)
-        longPressBrowserHelper.delegate = self
-        tab.addHelper(longPressBrowserHelper, name: LongPressBrowserHelper.name())
     }
 
     func tabManager(tabManager: TabManager, didAddTab tab: Browser, atIndex: Int) {
